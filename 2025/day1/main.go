@@ -15,5 +15,5 @@ func main() {
 	parsed := strings.Split(strings.TrimSpace(string(data)), "\n")
 
 	fmt.Println("Part 1: ", part1(parsed))
-	// fmt.Println("Part 2: ", solvePart2(parsed))
+	fmt.Println("Part 2: ", solvePart2(parsed))
 }

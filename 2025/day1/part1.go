@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-func add(amount int, position int, count int) (int, int) {
+func part1Add(amount int, position int, count int) (int, int) {
 	for range amount {
 		position++
 		if position == 100 {
@@ -19,7 +19,7 @@ func add(amount int, position int, count int) (int, int) {
 	return position, count
 }
 
-func subtract(amount int, position int, count int) (int, int) {
+func part1Subtract(amount int, position int, count int) (int, int) {
 	for range amount {
 		position--
 		if position == -1 {
@@ -43,9 +43,9 @@ func part1(lines []string) int {
 		amount, _ := strconv.Atoi(line[1:])
 
 		if indicator == "R" {
-			position, count = add(amount, position, count)
+			position, count = part1Add(amount, position, count)
 		} else {
-			position, count = subtract(amount, position, count)
+			position, count = part1Subtract(amount, position, count)
 		}
 	}
 
